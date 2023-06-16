@@ -1,10 +1,13 @@
 html {
     font-size: 18px;
+    background-color: rgb(166, 223, 226);
 }
 
 #container {
     width: 400px;
     margin: 50px auto 0;
+    background-color: #E6E7E8;
+    font-family: serif;
 }
 
 #text-input {
@@ -29,15 +32,37 @@ html {
     margin-bottom: 15px;
 }
 
+.complete-button {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #dc5464;
+}
+
+.complete-button:hover {
+    color: #ff6666;
+}
+
 .delete-button {
     border: none;
     outline: none;
-    background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
-    color: #ff3333;
+    color: #dc5464;
 }
 
 .delete-button:hover {
     color: #ff6666;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    padding: 1rem;
 }

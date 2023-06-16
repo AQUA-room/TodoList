@@ -18,6 +18,15 @@ textInput.addEventListener('keydown', e => {
     span.textContent = text;
     span.classList.add('todo-text');
 
+    button.textContent = '完了';
+    button.type = 'button';
+    button.classList.add('complete-button');
+    button.addEventListener('click', e => {
+        e.preventDefault();
+        todoList.setAttribute("class","end-button disabled");
+        todoList.previousElementSibling.setAttribute('text', 'line-through');
+    });
+
     button.textContent = '削除';
     button.type = 'button';
     button.classList.add('delete-button');
