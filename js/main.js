@@ -12,30 +12,33 @@ textInput.addEventListener('keydown', e => {
 
     const li = document.createElement('li');
     const span = document.createElement('span');
-    const button = document.createElement('button');
+    const delete_button = document.createElement('button');
+    const complete_button = document.createElement('button');
 
-    li.classList.add('list-item');
+    li.classList.add('list-item'); // クラス追加
     span.textContent = text;
     span.classList.add('todo-text');
 
-    button.textContent = '完了';
-    button.type = 'button';
-    button.classList.add('complete-button');
-    button.addEventListener('click', e => {
+    complete_button.textContent = '完了';
+    complete_button.type = 'button';
+    complete_button.classList.add('complete-button');
+    complete_button.addEventListener('click', e => {
         e.preventDefault();
-        todoList.setAttribute("class","end-button disabled");
-        todoList.previousElementSibling.setAttribute('text', 'line-through');
+        span.classList.add("line_class");
+        // todoList.previousElementSibling.setAttribute('text', 'line-through');
     });
 
-    button.textContent = '削除';
-    button.type = 'button';
-    button.classList.add('delete-button');
-    button.addEventListener('click', e => {
+    delete_button.textContent = '削除';
+    delete_button.type = 'button';
+    delete_button.classList.add('delete-button');
+    delete_button.addEventListener('click', e => {
         todoList.removeChild(e.target.closest('li'));
     });
 
     li.appendChild(span);
-    li.appendChild(button);
+    li.appendChild(complete_button);
+    li.appendChild(delete_button);    li.appendChild(complete_button);
+
     todoList.appendChild(li);
 
     textInput.value = '';

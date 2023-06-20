@@ -32,6 +32,10 @@ html {
     margin-bottom: 15px;
 }
 
+.line_class {
+    text-decoration: line-through;
+}
+
 .complete-button {
     border: none;
     outline: none;
